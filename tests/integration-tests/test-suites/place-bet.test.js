@@ -5,7 +5,6 @@ import gameSettings from "../_stubs/game-settings";
 import { socketOptionsFunc } from "../_stubs/test-data";
 import { getTimeOutToPlacingBetTime, initUserSession } from "../helper/helper";
 
-
 const socketOptions = socketOptionsFunc(appConfigs.hostingPort);
 
 describe("when place bet", () => {
@@ -49,22 +48,25 @@ describe("when place bet", () => {
     });
 
     describe("when place bet in placing bet time without valid client seed", () => {
-        it("should return own bet = -1", async () => {
-            // Arrange
-            const inGameData = await client.handleGameEvent((data) => data.remainingTime);
+        it(
+            "should return own bet = -1",
+            async () => {
+                // Arrange
+                const inGameData = await client.handleGameEvent((data) => data.remainingTime);
 
-            const timeout = getTimeOutToPlacingBetTime(inGameData.remainingTime, gameSettings.durations) * 1000;
+                const timeout = getTimeOutToPlacingBetTime(inGameData.remainingTime, gameSettings.durations) * 1000;
 
-            // Act
-            setTimeout(() => {
-                client.emit(eventTypes.bet, { betChoice: "tail", amount: 100 });
-            }, timeout);
+                // Act
+                setTimeout(() => {
+                    client.emit(eventTypes.bet, { betChoice: "tail", amount: 100 });
+                }, timeout);
 
-            // Assert
-            const data = await client.handleGameEvent((data) => data.endBet);
+                // Assert
+                const data = await client.handleGameEvent((data) => data.endBet);
 
-            expect(data.endBet).toEqual(-1);
-        });
+                expect(data.endBet).toEqual(-1);
+            },
+            60 * 1000
+        );
     });
-
 });

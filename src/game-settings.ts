@@ -6,10 +6,8 @@ export default {
     durations: {
         wholeRound: 29,
         flipTheCoin: 3,
-        placingBets: 17,
+        placingBets: 20,
         lockingBet: 3,
-        showingResult: 2,
-        startingRound: 4,
         mergeClientSeeds: 0,
     },
     choices: Object.values(BET_CHOICES),

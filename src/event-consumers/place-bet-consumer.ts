@@ -1,12 +1,9 @@
- 
-// import { DrawResult } from "../models/rounds";
-// import { calculateOddsRange, roundBetPercentage } from "../helpers";
-
 import { helpers } from "sc-common";
 import { PlaceBetConsumer as PlaceBetConsumerBase } from "sc-game-base/src/core/event-consumers";
+import gameSettings from "../game-settings";
 
 export default class PlaceBetConsumer extends PlaceBetConsumerBase {
-    composeBettingTimeValidationCriteria(roundId: number): { failure: boolean; notice: any; }[] {
+    composeBettingTimeValidationCriteria(roundId: number): { failure: boolean; notice: any }[] {
         const configs = this.gameData.gameConfigs;
         return [
             {
@@ -20,10 +17,15 @@ export default class PlaceBetConsumer extends PlaceBetConsumerBase {
             {
                 failure:
                     this.gameData.remainingTime < this.definition.durations.lockingBet ||
-                    this.gameData.remainingTime >= this.definition.durations.placingBets,
+                    this.gameData.remainingTime >= this.definition.durations.placingBets + gameSettings.durations.flipTheCoin,
                 notice: this.getNoticeObj(helpers.noticeHelper.placeBetNextRound),
             },
+            {
+                failure:
+                    this.gameData.remainingTime > this.definition.durations.placingBets &&
+                    this.gameData.remainingTime < this.definition.durations.placingBets + gameSettings.durations.flipTheCoin,
+                notice: this.getNoticeObj(helpers.noticeHelper.cannotPlaceBet),
+            },
         ];
-
     }
 }

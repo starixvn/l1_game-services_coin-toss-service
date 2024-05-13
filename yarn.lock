@@ -2393,8 +2393,8 @@
 
 "@types/sc-game-base@^1.0.0-beta.0":
   version "1.0.0-beta.3"
-  resolved "http://npm.lumigame.com/@types/sc-game-base/-/sc-game-base-1.0.0-beta.3.tgz#9757d01b113dd3f9034e71fdf8c112e7a10e4306"
-  integrity sha512-oSrHj57pawDHAv7VRTNqCZN+HXCrgdXYCUWoxhlEUl9YHBj6XVG7X9/7XraHuHQN/8tN+tCflAEwL0F500VQSw==
+  resolved "http://npm.lumigame.com/@types/sc-game-base/-/sc-game-base-1.0.0-beta.3.tgz#871ed34652096336512541f56b075b1ea663a7cf"
+  integrity sha512-bu/ZOaxSXKH2Kit6iVyz2G8WVlLKRKDM95uK14vyv64+pYPpPPt/0yE6hPnJsciaGlTkPRdzr3wXKUfTbcksVA==
   dependencies:
     sc-game-base "^5.0.1-beta.24"
     sc-game-management-client "^0.1.0"
@@ -6540,9 +6540,9 @@ propagate@^2.0.0:
   integrity sha512-vGrhOavPSTz4QVNuBNdcNXePNdNMaO1xj9yBeH1ScQPjk/rhg9sSlCXPhMkFuaNNW/syTvYqsnbIJxMBfRbbag==
 
 protobufjs@^7.2.3, protobufjs@^7.2.5:
-  version "7.2.6"
-  resolved "http://npm.lumigame.com/protobufjs/-/protobufjs-7.2.6.tgz#4a0ccd79eb292717aacf07530a07e0ed20278215"
-  integrity sha512-dgJaEDDL6x8ASUZ1YqWciTRrdOuYNzoOf27oHNfdyvKqHr5i0FV7FSLU+aIeFjyFgVxrpTOtQUi0BLLBymZaBw==
+  version "7.3.0"
+  resolved "http://npm.lumigame.com/protobufjs/-/protobufjs-7.3.0.tgz#a32ec0422c039798c41a0700306a6e305b9cb32c"
+  integrity sha512-YWD03n3shzV9ImZRX3ccbjqLxj7NokGN0V/ESiBV5xWqrommYHYiihuIyavq03pWSGqlyvYUFmfoMKd+1rPA/g==
   dependencies:
     "@protobufjs/aspromise" "^1.1.2"
     "@protobufjs/base64" "^1.1.2"
@@ -7158,9 +7158,9 @@ semver@^6.3.0, semver@^6.3.1:
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
 semver@^7.3.2, semver@^7.5.1:
-  version "7.6.1"
-  resolved "http://npm.lumigame.com/semver/-/semver-7.6.1.tgz#60bfe090bf907a25aa8119a72b9f90ef7ca281b2"
-  integrity sha512-f/vbBsu+fOiYt+lmwZV0rVwJScl46HppnOA1ZvIuBWKOTlllpyJ3bfVax76/OrhCH38dyxoDIA8K7uB963IYgA==
+  version "7.6.2"
+  resolved "http://npm.lumigame.com/semver/-/semver-7.6.2.tgz#1e3b34759f896e8f14d6134732ce798aeb0c6e13"
+  integrity sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==
 
 send@0.18.0:
   version "0.18.0"
