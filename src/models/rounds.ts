@@ -17,12 +17,10 @@ const resultSchema = new mongoose.Schema<Result>(
     }
 );
 
-const settlementResultSchema = resultSchema;
-
 const Schema = new mongoose.Schema({
     id: { type: Number, required: true },
     result: { type: resultSchema },
-    settlementResult: { type: [settlementResultSchema] },
+    settlementResult: { type: resultSchema },
     time: { type: Date, default: new Date() },
     exchangeRateId: { type: Number, require: true },
 });

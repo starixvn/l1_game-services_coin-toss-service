@@ -9,26 +9,15 @@ export type FinalSeeds = {
     finalHash: string;
 };
 
-export const generateResult = (finalSeeds: FinalSeeds) => {
-    const serverSeed = JSON.parse(finalSeeds.serverSeed);
-
-    // const balls = serverSeed.remain.split(":").map((x: string) => +x);
-
-    // const random = +serverSeed.random;
-
-    // const increment = finalHashToNumber(finalSeeds.finalHash);
-
-    // const totalRemainingBalls = balls.length;
-
-    // const index = (random + increment) % totalRemainingBalls;
-
-    const result = Math.floor(Math.random() * 10001) % 2 == 0;
+export const generateResult = (finalHash: string) => {
+    const result = finalHashToNumber(finalHash) % 2 == 0;
     return { head: result, tail: !result };
 };
 
-// export const finalHashToNumber = (finalHash: string) => {
-//     return parseInt(finalHash.slice(0, 2), 16);
-// };
+export const finalHashToNumber = (finalHash: string) => {
+    const Hexadecimal = 16;
+    return parseInt(finalHash.slice(0, 5), Hexadecimal);
+};
 
 export const getSettlementResult = (result: Result) => {
     return result;
