@@ -1,11 +1,13 @@
-import { Core, Table } from "sc-game-base";
+import { Core } from "sc-game-base";
+import { GameDefinition } from "sc-game-base/src/core";
 import appConfigs from "./app-configs";
 import CoinTossContainerRegistry from "./coin-toss-container-registry";
+import GameData from "./game-data";
 import gameSettings from "./game-settings";
 import { resultHelper } from "./helpers";
 
 const run = async () => {
-    const definition = new Table.TableGameDefinition(
+    const definition = new GameDefinition(
         gameSettings,
         resultHelper.generateResult,
         resultHelper.getSettlementResult,
@@ -13,7 +15,7 @@ const run = async () => {
         // ,resultHelper.getProbabilities
     );
 
-    const gameData = new Table.TableGameData(gameSettings.durations.wholeRound);
+    const gameData = new GameData(gameSettings.durations.wholeRound);
 
     const container = new CoinTossContainerRegistry().register(appConfigs, definition, gameData);
 
