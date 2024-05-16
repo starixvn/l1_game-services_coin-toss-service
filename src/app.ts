@@ -1,8 +1,7 @@
 import { Core } from "sc-game-base";
-import { GameDefinition } from "sc-game-base/src/core";
+import { GameData, GameDefinition } from "sc-game-base/src/core";
 import appConfigs from "./app-configs";
 import CoinTossContainerRegistry from "./coin-toss-container-registry";
-import GameData from "./game-data";
 import gameSettings from "./game-settings";
 import { resultHelper } from "./helpers";
 

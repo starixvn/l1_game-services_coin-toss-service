@@ -2235,11 +2235,6 @@
   dependencies:
     "@types/node" "*"
 
-"@types/chance@^1.1.6":
-  version "1.1.6"
-  resolved "http://npm.lumigame.com/@types/chance/-/chance-1.1.6.tgz"
-  integrity sha512-V+pm3stv1Mvz8fSKJJod6CglNGVqEQ6OyuqitoDkWywEODM/eJd1eSuIp9xt6DrX8BWZ2eDSIzbw1tPCUTvGbQ==
-
 "@types/connect@*":
   version "3.4.38"
   resolved "http://npm.lumigame.com/@types/connect/-/connect-3.4.38.tgz#5ba7f3bc4fbbdeaff8dded952e5ff2cc53f8d858"
@@ -2396,10 +2391,10 @@
   resolved "http://npm.lumigame.com/@types/sc-common/-/sc-common-1.0.0-beta.0.tgz"
   integrity sha512-Ql33qm27bpXj5lTXAmEZYA5AcLm+xEKD3oRQh++MFsfUVwqA5B1C9hjNl9jncwpBC6wzLC+Zv0ARysctltR+vw==
 
-"@types/sc-game-base@^1.0.0-beta.3":
-  version "1.0.0-beta.3"
-  resolved "http://npm.lumigame.com/@types/sc-game-base/-/sc-game-base-1.0.0-beta.3.tgz#8114c879f519f5e997e6b50172543099f41ea0a1"
-  integrity sha512-s0QGWaWyaK03n9bD7r/Pjg4tiPw7Um1Zi5R2da8ZXS8GuSSCMKKf06fjezxLOmFQJm8feNT+iK03sjRWGVrzLA==
+"@types/sc-game-base@^1.0.0-beta.4":
+  version "1.0.0-beta.4"
+  resolved "http://npm.lumigame.com/@types/sc-game-base/-/sc-game-base-1.0.0-beta.4.tgz#958ad74e62497571ff4af604c45049578f3af6b8"
+  integrity sha512-FwbQBbpRq2n9VnYdOrJl7GHPp2enSICIxReN80KrUppNQRPmMEXwX/ocqC3jsh1PuhO+xDJgLmhxzG93gj6SSg==
 
 "@types/sc-game-service-integration-utils@1.0.0-beta.1":
   version "1.0.0-beta.1"
@@ -7047,10 +7042,10 @@ sc-game-base@5.0.0:
     socket.io-msgpack-parser "^3.0.1"
     socket.io-prom-metrics "^1.0.3"
 
-sc-game-base@^5.1.1-beta.1:
-  version "5.1.1-beta.1"
-  resolved "http://npm.lumigame.com/sc-game-base/-/sc-game-base-5.1.1-beta.1.tgz#173f333dbf7c0b15d470e06f96cb2b7d8c183286"
-  integrity sha512-0pVrMeRIZyubrzvo0VbKuGlB9uHdmLcw9zuTyCUxeieWkNw1ytyoQ+GT75DftqezmXvEBY09NbpjWdQyA7cOCA==
+sc-game-base@^5.2.1-beta.1:
+  version "5.2.1-beta.1"
+  resolved "http://npm.lumigame.com/sc-game-base/-/sc-game-base-5.2.1-beta.1.tgz#a9be1825cfee8c69ce00253793a9c1e8a363b0dd"
+  integrity sha512-/FKnHTHUaNS6Vb/nXc4ybQCKIjc1Pu/W2sNv/AqwlGuJ5qBvUGnU/jfWZYr8s4667kbMzOeqKnEpA5GdAp8CdA==
   dependencies:
     awilix "^8.0.0"
     axios "^1.0.0"

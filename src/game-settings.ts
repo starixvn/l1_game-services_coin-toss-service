@@ -15,9 +15,9 @@ export default {
     hedgeBetGroups: [[BET_CHOICES.head, BET_CHOICES.tail]],
     numberOfRoundHistory: 100,
     provablyFair: true,
-    // botSettings: {
-    //     ratio: { overUnderOptions: 50, oddEvenOptions: 50 },
-    //     overUnderOptions: ["over", "under"],
-    //     oddEvenOptions: ["odd", "even"],
-    // },
+    botSettings: {
+        ratio: { headOption: 50, tailOption: 50 },
+        headOption: [BET_CHOICES.head],
+        tailOption: [BET_CHOICES.tail],
+    },
 };
