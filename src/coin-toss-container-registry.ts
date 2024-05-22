@@ -1,9 +1,23 @@
-import { asClass, asValue } from "awilix";
-import { ContainerRegistry } from "sc-game-base/src/core";
+import { AwilixContainer, asClass, asValue } from "awilix";
+import { Table } from "sc-game-base";
+import { TableContainerRegistry } from "sc-game-base/src/table";
 import { RunningRoundInfoPublisher } from "./event-publishers";
 import { betLogs, bets, results, rounds, tmpBets } from "./models/index";
 
-export default class CoinTossContainerRegistry extends ContainerRegistry {
+export default class CoinTossContainerRegistry extends TableContainerRegistry {
+    register(appConfigs: any, definition: Table.TableGameDefinition, gameData: Table.TableGameData): AwilixContainer<any> {
+        super.register(appConfigs, definition, gameData);
+        this.registerPFSettings();
+
+        return this.container;
+    }
+
+    registerPFSettings() {
+        this.container.register({
+            maxCombinedClientSeeds: asValue(5),
+        });
+    }
+
     registerPublishers() {
         super.registerPublishers();
 

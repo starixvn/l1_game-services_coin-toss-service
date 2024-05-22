@@ -1,4 +1,4 @@
-import { GameData as GameDataBase } from "sc-game-base/src/core";
+import { TableGameData as GameDataBase } from "sc-game-base/src/table";
 
 export default class GameData extends GameDataBase {
     constructor(remainingTime: number) {

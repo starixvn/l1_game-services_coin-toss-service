@@ -1,12 +1,12 @@
-import { Core } from "sc-game-base";
-import { GameData, GameDefinition } from "sc-game-base/src/core";
+import { Core, Table } from "sc-game-base";
 import appConfigs from "./app-configs";
 import CoinTossContainerRegistry from "./coin-toss-container-registry";
+import GameData from "./game-data";
 import gameSettings from "./game-settings";
 import { resultHelper } from "./helpers";
 
 const run = async () => {
-    const definition = new GameDefinition(
+    const definition = new Table.TableGameDefinition(
         gameSettings,
         resultHelper.generateResult,
         resultHelper.getSettlementResult,

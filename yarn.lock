@@ -1259,9 +1259,9 @@
   integrity sha512-T1QyPSDCyMXaO3pzBkF96E8xMkiRYbUEZADd29SyPGabqxMViNoii+NcK7eWJAEoU6RZyEm5lVSIjTmcdoB9HA==
 
 "@grpc/grpc-js@^1.7.1":
-  version "1.10.7"
-  resolved "http://npm.lumigame.com/@grpc/grpc-js/-/grpc-js-1.10.7.tgz#1abce1a8c4c90b79dbbe57d7e4310f3b0ce72899"
-  integrity sha512-ZMBVjSeDAz3tFSehyO6Pd08xZT1HfIwq3opbeM4cDlBh52gmwp0wVIPcQur53NN0ac68HMZ/7SF2rGRD5KmVmg==
+  version "1.10.8"
+  resolved "http://npm.lumigame.com/@grpc/grpc-js/-/grpc-js-1.10.8.tgz#99787785cd8335be861afd1cd485ae9f058e4484"
+  integrity sha512-vYVqYzHicDqyKB+NQhAc54I1QWCBLCrYG6unqOIcBTHx+7x8C9lcoLj3KVJXs2VB4lUbpWY+Kk9NipcbXYWmvg==
   dependencies:
     "@grpc/proto-loader" "^0.7.13"
     "@js-sdsl/ordered-map" "^4.4.2"
@@ -2263,9 +2263,9 @@
     "@types/express-unless" "*"
 
 "@types/express-serve-static-core@^4.17.33":
-  version "4.19.0"
-  resolved "http://npm.lumigame.com/@types/express-serve-static-core/-/express-serve-static-core-4.19.0.tgz#3ae8ab3767d98d0b682cda063c3339e1e86ccfaa"
-  integrity sha512-bGyep3JqPCRry1wq+O5n7oiBgGWmeIJXPjXXCo8EK0u8duZGSYar7cGqd3ML2JUsLGeB7fmc06KYo9fLGWqPvQ==
+  version "4.19.1"
+  resolved "http://npm.lumigame.com/@types/express-serve-static-core/-/express-serve-static-core-4.19.1.tgz#57d34698bb580720fd6e3c360d4b2fdef579b979"
+  integrity sha512-ej0phymbFLoCB26dbbq5PGScsf2JAJ4IJHjG10LalgUV36XKTmA4GdA+PVllKvRk0sEKt64X8975qFnkSi0hqA==
   dependencies:
     "@types/node" "*"
     "@types/qs" "*"
@@ -2391,10 +2391,10 @@
   resolved "http://npm.lumigame.com/@types/sc-common/-/sc-common-1.0.0-beta.0.tgz"
   integrity sha512-Ql33qm27bpXj5lTXAmEZYA5AcLm+xEKD3oRQh++MFsfUVwqA5B1C9hjNl9jncwpBC6wzLC+Zv0ARysctltR+vw==
 
-"@types/sc-game-base@1.0.0-beta.3":
-  version "1.0.0-beta.3"
-  resolved "http://npm.lumigame.com/@types/sc-game-base/-/sc-game-base-1.0.0-beta.3.tgz#bee3fce24d8218a603a35e52a6dfe23b19473659"
-  integrity sha512-NQ9RTYK+9U9R5p6VaGvyTNMvQcvgeCW4hHxbbyUmsIftU9Zl0dQB80rB4CHBnsdov8z1gox0vLb4+xl0HQ8N+w==
+"@types/sc-game-base@^1.0.0-beta.4":
+  version "1.0.0-beta.4"
+  resolved "http://npm.lumigame.com/@types/sc-game-base/-/sc-game-base-1.0.0-beta.4.tgz#958ad74e62497571ff4af604c45049578f3af6b8"
+  integrity sha512-FwbQBbpRq2n9VnYdOrJl7GHPp2enSICIxReN80KrUppNQRPmMEXwX/ocqC3jsh1PuhO+xDJgLmhxzG93gj6SSg==
 
 "@types/sc-game-service-integration-utils@1.0.0-beta.1":
   version "1.0.0-beta.1"
@@ -2641,9 +2641,9 @@ awilix@^8.0.0:
     fast-glob "^3.2.12"
 
 axios-retry@^4.0.0:
-  version "4.1.0"
-  resolved "http://npm.lumigame.com/axios-retry/-/axios-retry-4.1.0.tgz#aac5a9657213913048201152ef14090f7111608f"
-  integrity sha512-svdth4H00yhlsjBbjfLQ/sMLkXqeLxhiFC1nE1JtkN/CIssGxqk0UwTEdrVjwA2gr3yJkAulwvDSIm4z4HyPvg==
+  version "4.3.0"
+  resolved "http://npm.lumigame.com/axios-retry/-/axios-retry-4.3.0.tgz#43d10bb3675286d116e0a37350ff73aec36ebb80"
+  integrity sha512-vUAQ3bi02Q++b8aAn3fuM03qRKFLZ6BPcqSVsOpgWeww2jrYFpu9SKb9VuctvxrJuRCWM/voDuuRAD7v3A1G5g==
   dependencies:
     is-retry-allowed "^2.2.0"
 
@@ -2671,9 +2671,9 @@ axios@^0.21.1:
     follow-redirects "^1.14.0"
 
 axios@^1.0.0:
-  version "1.6.8"
-  resolved "http://npm.lumigame.com/axios/-/axios-1.6.8.tgz#66d294951f5d988a00e87a0ffb955316a619ea66"
-  integrity sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==
+  version "1.7.2"
+  resolved "http://npm.lumigame.com/axios/-/axios-1.7.2.tgz#b625db8a7051fbea61c35a3cbb3a1daa7b9c7621"
+  integrity sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
@@ -5747,6 +5747,13 @@ lower-case@^2.0.2:
   dependencies:
     tslib "^2.0.3"
 
+lru-cache@6.0.0, lru-cache@^6.0.0:
+  version "6.0.0"
+  resolved "http://npm.lumigame.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
+  integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
+  dependencies:
+    yallist "^4.0.0"
+
 lru-cache@^5.1.1:
   version "5.1.1"
   resolved "http://npm.lumigame.com/lru-cache/-/lru-cache-5.1.1.tgz"
@@ -5754,28 +5761,13 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-lru-cache@^6.0.0:
-  version "6.0.0"
-  resolved "http://npm.lumigame.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
-  integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
-  dependencies:
-    yallist "^4.0.0"
-
-lru-cache@~4.0.0:
-  version "4.0.2"
-  resolved "http://npm.lumigame.com/lru-cache/-/lru-cache-4.0.2.tgz#1d17679c069cda5d040991a09dbc2c0db377e55e"
-  integrity sha1-HRdnnAac2l0ECZGgnbwsDbN35V4=
-  dependencies:
-    pseudomap "^1.0.1"
-    yallist "^2.0.0"
-
 lru-memoizer@^2.1.2:
-  version "2.2.0"
-  resolved "http://npm.lumigame.com/lru-memoizer/-/lru-memoizer-2.2.0.tgz#b9d90c91637b4b1a423ef76f3156566691293df8"
-  integrity sha512-QfOZ6jNkxCcM/BkIPnFsqDhtrazLRsghi9mBwFAzol5GCvj4EkFT899Za3+QwikCg5sRX8JstioBDwOxEyzaNw==
+  version "2.3.0"
+  resolved "http://npm.lumigame.com/lru-memoizer/-/lru-memoizer-2.3.0.tgz#ef0fbc021bceb666794b145eefac6be49dc47f31"
+  integrity sha512-GXn7gyHAMhO13WSKrIiNfztwxodVsP8IoZ3XfrJV4yH2x0/OeTO/FIaAHTY5YekdGgW94njfuKmyyt1E0mR6Ug==
   dependencies:
     lodash.clonedeep "^4.5.0"
-    lru-cache "~4.0.0"
+    lru-cache "6.0.0"
 
 lru_map@^0.3.3:
   version "0.3.3"
@@ -6567,11 +6559,6 @@ proxy-from-env@^1.1.0:
   resolved "http://npm.lumigame.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 
-pseudomap@^1.0.1:
-  version "1.0.2"
-  resolved "http://npm.lumigame.com/pseudomap/-/pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3"
-  integrity sha1-8FKijacOYYkX7wqKw0wa5aaChrM=
-
 psl@^1.1.33:
   version "1.9.0"
   resolved "http://npm.lumigame.com/psl/-/psl-1.9.0.tgz"
@@ -7042,10 +7029,10 @@ sc-game-base@5.0.0:
     socket.io-msgpack-parser "^3.0.1"
     socket.io-prom-metrics "^1.0.3"
 
-sc-game-base@5.1.1-beta.1:
-  version "5.1.1-beta.1"
-  resolved "http://npm.lumigame.com/sc-game-base/-/sc-game-base-5.1.1-beta.1.tgz#eff416e8d83ef3fbdae9e9272aaf4edf765f20d7"
-  integrity sha512-WORaxHswTjYHlVsyeSK+fbHVfTt5BNKxIjbIIpRS5ruUybNWDXK34sN1WG0sKQK4U4bXH+Cy2UIAlFv2t73vow==
+sc-game-base@^5.2.1-beta.1:
+  version "5.2.1-beta.1"
+  resolved "http://npm.lumigame.com/sc-game-base/-/sc-game-base-5.2.1-beta.1.tgz#bd6aaab1464193b38e1543d6992d6068e66fe864"
+  integrity sha512-0cCHbrqMHz7YNkOjLgA/CkWLEy5uRlvkYO/ABgYSfQ8FFI8D3znXPfdtWr7Lwo8VADjFJNMtuz9BaMi/ndshVw==
   dependencies:
     awilix "^8.0.0"
     axios "^1.0.0"
@@ -8186,11 +8173,6 @@ y18n@^5.0.5:
   version "5.0.8"
   resolved "http://npm.lumigame.com/y18n/-/y18n-5.0.8.tgz#7f4934d0f7ca8c56f95314939ddcd2dd91ce1d55"
   integrity sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==
-
-yallist@^2.0.0:
-  version "2.1.2"
-  resolved "http://npm.lumigame.com/yallist/-/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
-  integrity sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
 
 yallist@^3.0.2:
   version "3.1.1"
