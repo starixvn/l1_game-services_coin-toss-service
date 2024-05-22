@@ -2391,10 +2391,10 @@
   resolved "http://npm.lumigame.com/@types/sc-common/-/sc-common-1.0.0-beta.0.tgz"
   integrity sha512-Ql33qm27bpXj5lTXAmEZYA5AcLm+xEKD3oRQh++MFsfUVwqA5B1C9hjNl9jncwpBC6wzLC+Zv0ARysctltR+vw==
 
-"@types/sc-game-base@^1.0.0-beta.4":
-  version "1.0.0-beta.4"
-  resolved "http://npm.lumigame.com/@types/sc-game-base/-/sc-game-base-1.0.0-beta.4.tgz#958ad74e62497571ff4af604c45049578f3af6b8"
-  integrity sha512-FwbQBbpRq2n9VnYdOrJl7GHPp2enSICIxReN80KrUppNQRPmMEXwX/ocqC3jsh1PuhO+xDJgLmhxzG93gj6SSg==
+"@types/sc-game-base@1.0.0-beta.3":
+  version "1.0.0-beta.3"
+  resolved "http://npm.lumigame.com/@types/sc-game-base/-/sc-game-base-1.0.0-beta.3.tgz#bee3fce24d8218a603a35e52a6dfe23b19473659"
+  integrity sha512-NQ9RTYK+9U9R5p6VaGvyTNMvQcvgeCW4hHxbbyUmsIftU9Zl0dQB80rB4CHBnsdov8z1gox0vLb4+xl0HQ8N+w==
 
 "@types/sc-game-service-integration-utils@1.0.0-beta.1":
   version "1.0.0-beta.1"
@@ -7042,10 +7042,10 @@ sc-game-base@5.0.0:
     socket.io-msgpack-parser "^3.0.1"
     socket.io-prom-metrics "^1.0.3"
 
-sc-game-base@^5.2.1-beta.1:
-  version "5.2.1-beta.1"
-  resolved "http://npm.lumigame.com/sc-game-base/-/sc-game-base-5.2.1-beta.1.tgz#a9be1825cfee8c69ce00253793a9c1e8a363b0dd"
-  integrity sha512-/FKnHTHUaNS6Vb/nXc4ybQCKIjc1Pu/W2sNv/AqwlGuJ5qBvUGnU/jfWZYr8s4667kbMzOeqKnEpA5GdAp8CdA==
+sc-game-base@5.1.1-beta.1:
+  version "5.1.1-beta.1"
+  resolved "http://npm.lumigame.com/sc-game-base/-/sc-game-base-5.1.1-beta.1.tgz#eff416e8d83ef3fbdae9e9272aaf4edf765f20d7"
+  integrity sha512-WORaxHswTjYHlVsyeSK+fbHVfTt5BNKxIjbIIpRS5ruUybNWDXK34sN1WG0sKQK4U4bXH+Cy2UIAlFv2t73vow==
   dependencies:
     awilix "^8.0.0"
     axios "^1.0.0"
