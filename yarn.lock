@@ -2235,6 +2235,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/chance@^1.1.6":
+  version "1.1.6"
+  resolved "http://npm.lumigame.com/@types/chance/-/chance-1.1.6.tgz#2fe3de58742629602c3fbab468093b27207f04ad"
+  integrity sha512-V+pm3stv1Mvz8fSKJJod6CglNGVqEQ6OyuqitoDkWywEODM/eJd1eSuIp9xt6DrX8BWZ2eDSIzbw1tPCUTvGbQ==
+
 "@types/connect@*":
   version "3.4.38"
   resolved "http://npm.lumigame.com/@types/connect/-/connect-3.4.38.tgz#5ba7f3bc4fbbdeaff8dded952e5ff2cc53f8d858"
