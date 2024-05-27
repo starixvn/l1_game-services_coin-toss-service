@@ -37,4 +37,11 @@ export default class CoinTossContainerRegistry extends TableContainerRegistry {
             resultsRepository: asValue(results),
         });
     }
+    registerCrons() {
+        super.registerCrons();
+
+        this.container.register({
+            bot: asClass(Table.Crons.TableGameConfigBot).singleton(),
+        });
+    }
 }
