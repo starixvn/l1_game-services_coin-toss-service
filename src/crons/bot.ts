@@ -16,4 +16,13 @@ export default class Bot extends TableGameConfigBot {
                 (this.gameData as GameData).playerBetCount[choice].push(playerId);
         }
     }
+
+    override addToPlayersAndPublish(bot: any) {
+        (this.gameData as GameData).players[bot.id] = bot;
+    }
+
+    override removeBot(botId: string) {
+        delete (this.gameData as GameData).players[botId];
+        delete (this.botsInRoom as any)[botId];
+    }
 }

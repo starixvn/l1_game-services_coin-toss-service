@@ -1,9 +1,10 @@
 import { AwilixContainer, asClass, asValue } from "awilix";
 import { Table } from "sc-game-base";
+import { PlaceBetPublisher } from "sc-game-base/src/core/event-publishers";
 import { TableContainerRegistry } from "sc-game-base/src/table";
 import { Bot, GameCron, ProcessBetQueue } from "./crons";
 import { InGameConsumer, UserSignInConsumer } from "./event-consumers";
-import { RunningRoundInfoPublisher } from "./event-publishers";
+import { RoundResultPublisher, RunningRoundInfoPublisher } from "./event-publishers";
 import GameData from "./game-data";
 import { betLogs, bets, results, rounds, tmpBets } from "./models/index";
 
@@ -26,6 +27,8 @@ export default class CoinTossContainerRegistry extends TableContainerRegistry {
 
         this.container.register({
             runningRoundInfoPublisher: asClass(RunningRoundInfoPublisher).singleton(),
+            placeBetPublisher: asClass(PlaceBetPublisher).singleton(),
+            roundResultPublisher: asClass(RoundResultPublisher).singleton(),
         });
     }
 
@@ -46,7 +49,7 @@ export default class CoinTossContainerRegistry extends TableContainerRegistry {
 
         this.container.register({
             inGameConsumer: asClass(InGameConsumer).singleton(),
-            userSignInConsumer: asClass(UserSignInConsumer).singleton()
+            userSignInConsumer: asClass(UserSignInConsumer).singleton(),
         });
     }
 
