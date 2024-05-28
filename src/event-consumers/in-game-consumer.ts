@@ -13,4 +13,29 @@ export default class InGameConsumer extends TableInGameConsumer {
     getUserBetPercentage(playerBetCount: Record<string, string[]>) {
         return roundUserBetPercentage(calculateUserBetPercentage(playerBetCount));
     }
+
+    async consume(realPlayer: any) {
+        const { remainingTime, gameConfigs, umMessages } = this.gameData;
+        const disabled = !gameConfigs || !gameConfigs.enabled;
+        if (disabled) {
+            realPlayer.socketClient.emit(this.definition.name, { remainingTime, um: disabled, um_message: umMessages });
+        }
+
+        const payload = await this.buildPayload(realPlayer);
+        const { red, avatarId, type, rate } = payload.user;
+        const player = {
+            id: realPlayer.UID,
+            name: realPlayer.profile.name,
+            red,
+            avatarId,
+            type,
+            rate,
+        };
+
+        if (!this.gameData.players[realPlayer.UID]) {
+            this.gameData.players[realPlayer.UID] = player;
+        }
+
+        realPlayer.socketClient.emit(this.definition.name, payload);
+    }
 }

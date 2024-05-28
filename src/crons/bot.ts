@@ -3,7 +3,9 @@ import GameData from "../game-data";
 
 export default class Bot extends TableGameConfigBot {
     updateBalanceAndPublishBetPayload(botId: string, choice: string, amount: number, balance: number) {
-        super.updateBalanceAndPublishBetPayload(botId, choice, amount, balance);
+        if ((this.gameData as GameData).players[botId]) {
+            (this.gameData as GameData).players[botId].red = balance;
+        }
         this.updatePlayerBetCount(botId, choice);
     }
 
