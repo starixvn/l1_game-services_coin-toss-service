@@ -1,7 +1,7 @@
 import { RunningRoundInfoPublisher as RunningRoundInfoPublisherBase } from "sc-game-base/src/core/event-publishers";
 
 import GameData from "../game-data";
-import { calculateBetPercentage, roundBetPercentage } from "../helpers";
+import { calculateUserBetPercentage, roundUserBetPercentage } from "../helpers";
 
 export default class RunningRoundInfoPublisher extends RunningRoundInfoPublisherBase {
     publish() {
@@ -12,11 +12,11 @@ export default class RunningRoundInfoPublisher extends RunningRoundInfoPublisher
 
     publishBetPercentage() {
         const { playerBetCount } = this.gameData as GameData;
-        const betPercentage = roundBetPercentage(calculateBetPercentage(playerBetCount));
+        const userBetPercentage = roundUserBetPercentage(calculateUserBetPercentage(playerBetCount));
 
         const choices = Object.keys(playerBetCount);
         if (choices.some((choice) => playerBetCount[choice])) {
-            this.publishToAllUsers({ betPercentage });
+            this.publishToAllUsers({ userBetPercentage });
         }
     }
 }

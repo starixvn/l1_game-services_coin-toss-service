@@ -1,6 +1,6 @@
- import * as resultHelper from "./result-helper";
+import * as resultHelper from "./result-helper";
 // import { calculateOddsRange } from "./calculate-odds-range";
- import { calculateBetPercentage, roundBetPercentage } from "./round-bet-percentage";
+import { calculateUserBetPercentage, roundUserBetPercentage } from "./round-bet-percentage";
 
- export { calculateBetPercentage, resultHelper, roundBetPercentage };
+export { calculateUserBetPercentage, resultHelper, roundUserBetPercentage };
 
