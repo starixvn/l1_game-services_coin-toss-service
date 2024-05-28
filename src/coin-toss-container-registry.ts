@@ -1,11 +1,14 @@
 import { AwilixContainer, asClass, asValue } from "awilix";
 import { Table } from "sc-game-base";
 import { TableContainerRegistry } from "sc-game-base/src/table";
+import { Bot, GameCron, ProcessBetQueue } from "./crons";
+import { InGameConsumer, UserSignInConsumer } from "./event-consumers";
 import { RunningRoundInfoPublisher } from "./event-publishers";
+import GameData from "./game-data";
 import { betLogs, bets, results, rounds, tmpBets } from "./models/index";
 
 export default class CoinTossContainerRegistry extends TableContainerRegistry {
-    register(appConfigs: any, definition: Table.TableGameDefinition, gameData: Table.TableGameData): AwilixContainer<any> {
+    register(appConfigs: any, definition: Table.TableGameDefinition, gameData: GameData): AwilixContainer<any> {
         super.register(appConfigs, definition, gameData);
         this.registerPFSettings();
 
@@ -37,11 +40,23 @@ export default class CoinTossContainerRegistry extends TableContainerRegistry {
             resultsRepository: asValue(results),
         });
     }
+
+    registerConsumers() {
+        super.registerConsumers();
+
+        this.container.register({
+            inGameConsumer: asClass(InGameConsumer).singleton(),
+            userSignInConsumer: asClass(UserSignInConsumer).singleton()
+        });
+    }
+
     registerCrons() {
         super.registerCrons();
 
         this.container.register({
-            bot: asClass(Table.Crons.TableGameConfigBot).singleton(),
+            bot: asClass(Bot).singleton(),
+            gameCron: asClass(GameCron).singleton().proxy(),
+            processBetQueue: asClass(ProcessBetQueue).singleton().proxy(),
         });
     }
 }
