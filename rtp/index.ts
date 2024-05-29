@@ -1,10 +1,10 @@
- import Chance from "chance";
+import Chance from "chance";
 import { SeedHelper, ServerSeedHelper } from "sc-game-base/src/core/helpers";
 import { generateSeed } from "sc-pf-client-seed/dist";
 import { generateResult, getSettlementResult } from "../src/helpers/result-helper";
 const chance = new Chance();
 
-const betChoices = ["head","tail"];
+const betChoices = ["head", "tail"];
 
 const odds = {
     head: 1.96,
@@ -17,15 +17,26 @@ const generateClientSeeds = () => {
 
 const exportRtpResult = (randomMode = 1, numberOfRuns = 1_000_000, choices = betChoices) => {
     const current = Date.now();
-    
+
     const resultStat = {
         head: 0,
         tail: 0,
     };
+
+    const resultProbability = {
+        head: 0,
+        tail: 0,
+    };
+
     let totalWinAmount = 0;
     let winCount = 0;
     let totalBetAmount = 0;
     const winStreaks = {
+        head: {},
+        tail: {},
+    };
+
+    let winStreaksProbability = {
         head: {},
         tail: {},
     };
@@ -56,8 +67,11 @@ const exportRtpResult = (randomMode = 1, numberOfRuns = 1_000_000, choices = bet
         }
 
         if (curChoice != winningChoice) {
-            if (curStreak >= 4)
+            if (curStreak >= 4) {
                 winStreaks[curChoice][curStreak] = winStreaks[curChoice][curStreak] ? winStreaks[curChoice][curStreak] + 1 : 1;
+                const num = winStreaks[curChoice][curStreak] / numberOfRuns;
+                winStreaksProbability[curChoice][curStreak] = (Math.round(num * 100) / 100).toFixed(3);
+            }
 
             curChoice = winningChoice;
             curStreak = 1;
@@ -65,19 +79,24 @@ const exportRtpResult = (randomMode = 1, numberOfRuns = 1_000_000, choices = bet
             curStreak++;
         }
     }
-
+    resultProbability.head = resultStat.head / numberOfRuns;
+    resultProbability.tail = resultStat.tail / numberOfRuns;
     console.log(`randomMode: ${randomMode}`);
     console.log("resultStat");
     console.log(resultStat);
+    console.log("resultStatProbability");
+    console.log(resultProbability);
     console.log("winStreaks");
     console.log(winStreaks);
+    console.log("winStreaksProbability");
+    console.log(winStreaksProbability);
     console.log("RTP");
     console.log({ rtp: totalWinAmount / totalBetAmount });
     const currentEnd = Date.now();
-    console.log(currentEnd-current);
+    console.log(`Run ${numberOfRuns} rounds in ${currentEnd - current}ms`);
 };
 
 const randomMode = 1;
-const rounds = 1_000_000;
+const rounds = 100_000;
 
 exportRtpResult(randomMode, rounds);
