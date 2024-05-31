@@ -3,7 +3,8 @@ import appConfigs from "./app-configs";
 import CoinTossContainerRegistry from "./coin-toss-container-registry";
 import GameData from "./game-data";
 import gameSettings from "./game-settings";
-import { resultHelper } from "./helpers";
+import helper from "./helpers";
+const resultHelper = helper.resultHelper;
 
 const run = async () => {
     const definition = new Table.TableGameDefinition(
@@ -11,7 +12,6 @@ const run = async () => {
         resultHelper.generateResult,
         resultHelper.getSettlementResult,
         resultHelper.generateRawResultForHash
-        // ,resultHelper.getProbabilities
     );
 
     const gameData = new GameData(gameSettings.durations.wholeRound);

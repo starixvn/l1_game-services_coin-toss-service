@@ -1,6 +1,6 @@
 import { TableInGameConsumer } from "sc-game-base/src/table/event-consumers";
 import GameData from "../game-data";
-import { calculateUserBetPercentage, roundUserBetPercentage } from "../helpers";
+import { calculateUserBetPercentage, roundUserBetPercentage } from "../helpers/bet-percentage";
 
 export default class InGameConsumer extends TableInGameConsumer {
     async buildPayload(realPlayer: any) {

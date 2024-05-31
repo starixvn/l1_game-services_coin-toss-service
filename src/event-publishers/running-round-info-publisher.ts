@@ -1,7 +1,7 @@
 import { RunningRoundInfoPublisher as RunningRoundInfoPublisherBase } from "sc-game-base/src/core/event-publishers";
 
 import GameData from "../game-data";
-import { calculateUserBetPercentage, roundUserBetPercentage } from "../helpers";
+import { calculateUserBetPercentage, roundUserBetPercentage } from "../helpers/bet-percentage";
 
 export default class RunningRoundInfoPublisher extends RunningRoundInfoPublisherBase {
     publish() {
