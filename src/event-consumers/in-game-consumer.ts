@@ -7,7 +7,7 @@ export default class InGameConsumer extends TableInGameConsumer {
         const payload = await super.buildPayload(realPlayer);
         const { playerBetCount } = this.gameData as GameData;
         const userBetPercentage = this.getUserBetPercentage(playerBetCount);
-        return { ...payload, ...userBetPercentage };
+        return { ...payload, userBetPercentage };
     }
 
     getUserBetPercentage(playerBetCount: Record<string, string[]>) {
