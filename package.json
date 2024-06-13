@@ -30,7 +30,7 @@
         "extensionless": "^1.9.6",
         "mongoose": "^5.9.25",
         "sc-common": "^1.8.2-beta.2",
-        "sc-game-base": "^5.2.1-beta.4"
+        "sc-game-base": "^5.2.1"
     },
     "devDependencies": {
         "@babel/preset-env": "^7.23.9",

@@ -7,7 +7,6 @@ export default {
         flipTheCoin: 3,
         placingBets: 20,
         lockingBet: 3,
-        mergeClientSeeds: 0,
     },
     choices: ["head", "tail"],
     choicesMapper: { head: 1, tail: 2 },

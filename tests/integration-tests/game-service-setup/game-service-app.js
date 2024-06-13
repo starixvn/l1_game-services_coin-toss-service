@@ -4,16 +4,16 @@ import { initAPIStub, stubUserService, subGameManagementService } from "sc-game-
 import appConfigs from "../../../build/app-configs.IGT";
 import CoinTossContainerRegistry from "../../../build/coin-toss-container-registry";
 import GameData from "../../../build/game-data";
-import { resultHelper } from "../../../build/helpers";
+import helpers from "../../../build/helpers";
 import gameSettings from "../_stubs/game-settings";
 
 export const run = async () => {
     initAPIStub(appConfigs.apiSettings.apiUrl);
     const definition = new TableGameDefinition(
         gameSettings,
-        resultHelper.generateResult,
-        resultHelper.getSettlementResult,
-        resultHelper.generateRawResultForHash
+        helpers.resultHelper.generateResult,
+        helpers.resultHelper.getSettlementResult,
+        helpers.resultHelper.generateRawResultForHash
     );
     const gameData = new GameData(gameSettings.durations.wholeRound);
     stubUserService(appConfigs);

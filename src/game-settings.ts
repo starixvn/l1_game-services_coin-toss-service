@@ -8,7 +8,6 @@ export default {
         flipTheCoin: 3,
         placingBets: 20,
         lockingBet: 3,
-        mergeClientSeeds: 1,
     },
     choices: Object.values(BET_CHOICES),
     choicesMapper: { head: 1, tail: 2 },
