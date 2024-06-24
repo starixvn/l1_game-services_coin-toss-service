@@ -16,15 +16,15 @@ export default class PlaceBetConsumer extends PlaceBetConsumerBase {
             },
             {
                 failure:
-                    this.gameData.remainingTime < this.definition.durations.lockingBet ||
-                    this.gameData.remainingTime >= this.definition.durations.placingBets + gameSettings.durations.flipTheCoin,
-                notice: this.getNoticeObj(helpers.noticeHelper.placeBetNextRound),
+                    this.gameData.remainingTime >= this.definition.durations.placingBets &&
+                    this.gameData.remainingTime <= this.definition.durations.placingBets + gameSettings.durations.flipTheCoin,
+                notice: this.getNoticeObj(helpers.noticeHelper.cannotPlaceBet),
             },
             {
                 failure:
-                    this.gameData.remainingTime > this.definition.durations.placingBets &&
-                    this.gameData.remainingTime < this.definition.durations.placingBets + gameSettings.durations.flipTheCoin,
-                notice: this.getNoticeObj(helpers.noticeHelper.cannotPlaceBet),
+                    this.gameData.remainingTime < this.definition.durations.lockingBet ||
+                    this.gameData.remainingTime > this.definition.durations.placingBets + gameSettings.durations.flipTheCoin,
+                notice: this.getNoticeObj(helpers.noticeHelper.placeBetNextRound),
             },
         ];
     }
