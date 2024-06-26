@@ -8,7 +8,7 @@ export default class PlaceBetConsumer extends PlaceBetConsumerBase {
         return [
             {
                 failure: !configs.enabled,
-                notice: this.getNoticeObj(helpers.noticeHelper.invalidBet),
+                notice: this.getNoticeObj(helpers.noticeHelper.placeBetNextRound),
             },
             {
                 failure: roundId !== this.gameData.roundId,
