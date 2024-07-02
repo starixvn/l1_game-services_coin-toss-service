@@ -7041,10 +7041,10 @@ sc-game-base@5.0.0:
     socket.io-msgpack-parser "^3.0.1"
     socket.io-prom-metrics "^1.0.3"
 
-sc-game-base@^5.2.1:
-  version "5.2.1"
-  resolved "http://npm.lumigame.com/sc-game-base/-/sc-game-base-5.2.1.tgz#199a28d77fcdc25806d6431b078f09ddaa44d0d2"
-  integrity sha512-8EgGd7oaU3nwuYw6iDkqEmVpfKM3vWKdaKbdRWbKkChbnSHfdKCT4nSanNSyVxqu48Nl6dzDvfGS8ChVX0k3vA==
+sc-game-base@^5.2.2:
+  version "5.2.2"
+  resolved "http://npm.lumigame.com/sc-game-base/-/sc-game-base-5.2.2.tgz#d4b38bff02fb160ab8a55b8602df1d6c5558793a"
+  integrity sha512-Lf7oBjd2x5uFpD1cbtP+xA8MylvznPmQTH+D+onjeq6xDspDeavTZf6a265XoH2Mxn7ogCX82vpjzEwzO+2TXg==
   dependencies:
     awilix "^8.0.0"
     axios "^1.0.0"
@@ -7068,7 +7068,7 @@ sc-game-base@^5.2.1:
     sc-game-management-client "^0.1.0"
     sc-instrument "1.1.1-beta.2"
     sc-instrument-helper "1.0.0"
-    sc-pf-client-seed "^1.0.1-beta.0"
+    sc-pf-client-seed "^1.0.5"
     socket.io "^4.5.4"
     socket.io-msgpack-parser "^3.0.1"
     socket.io-prom-metrics "^1.0.3"
@@ -7129,10 +7129,10 @@ sc-instrument@1.1.1-beta.2:
     opentelemetry-instrumentation-socket.io "0.34.0"
     socket.io "4.6.1"
 
-sc-pf-client-seed@^1.0.1-beta.0:
-  version "1.0.1"
-  resolved "http://npm.lumigame.com/sc-pf-client-seed/-/sc-pf-client-seed-1.0.1.tgz#93f80cc8a07e1ed7c29c7e145497bb828cb0a870"
-  integrity sha512-2yK+gxoA2CkDrsQZKILA29EWzPHAuUZC4eXtJcy5ni0j3Ks5TONKRUY9NIsRiOkCudLfuG/xD7XVmMNsxn/egA==
+sc-pf-client-seed@^1.0.5:
+  version "1.0.5"
+  resolved "http://npm.lumigame.com/sc-pf-client-seed/-/sc-pf-client-seed-1.0.5.tgz#8ce5fd5a5482d1cd9f803560bc3acc4e89e83d70"
+  integrity sha512-KRkuLgqs508IvsSCR381esnKgEK2vid0JwE4Vom9XpJBlNBSjov+6bITO8FlX8W5Hss2Xe1pX6wCvFJVrhZvvg==
   dependencies:
     chance "^1.1.11"
 

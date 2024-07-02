@@ -3,7 +3,7 @@ import { Table } from "sc-game-base";
 import { PlaceBetPublisher } from "sc-game-base/src/core/event-publishers";
 import { TableContainerRegistry } from "sc-game-base/src/table";
 import { Bot, GameCron, ProcessBetQueue } from "./crons";
-import { InGameConsumer, OutGameConsumer, UserSignInConsumer } from "./event-consumers";
+import { InGameConsumer, OutGameConsumer, UserSignInConsumer, PlaceBetConsumer } from "./event-consumers";
 import { RoundResultPublisher, RunningRoundInfoPublisher } from "./event-publishers";
 import GameData from "./game-data";
 import { betLogs, bets, results, rounds, tmpBets } from "./models/index";
@@ -51,6 +51,7 @@ export default class CoinTossContainerRegistry extends TableContainerRegistry {
             inGameConsumer: asClass(InGameConsumer).singleton(),
             userDisconnectConsumer: asClass(OutGameConsumer).singleton(),
             userSignInConsumer: asClass(UserSignInConsumer).singleton(),
+            placeBetConsumer: asClass(PlaceBetConsumer).singleton(),
         });
     }
 
