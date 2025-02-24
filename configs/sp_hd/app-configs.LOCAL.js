@@ -60,4 +60,7 @@ export default {
             boostedOdds: -1001516573929,
         },
     },
+    gameManagementApiSettings: {
+        BASE: "http://sp-hd-game-management-service-local-service:5000",
+    },
 };
