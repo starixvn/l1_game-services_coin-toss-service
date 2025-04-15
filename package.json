@@ -40,6 +40,7 @@
         "@types/jest": "^29.5.12",
         "@types/sc-common": "^1.0.0-beta.0",
         "@types/sc-game-base": "^1.0.0-beta.6",
+        "@types/sc-base-database": "^1.0.0-beta.0",
         "@types/sc-game-service-integration-utils": "1.0.0-beta.1",
         "@types/socket.io": "^3.0.2",
         "husky": "^9.0.6",

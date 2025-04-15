@@ -6,6 +6,7 @@ import CoinTossContainerRegistry from "../../../build/coin-toss-container-regist
 import GameData from "../../../build/game-data";
 import helpers from "../../../build/helpers";
 import gameSettings from "../_stubs/game-settings";
+import { registerViewModule } from "../../../src/register-view-module";
 
 export const run = async () => {
     initAPIStub(appConfigs.apiSettings.apiUrl);
@@ -22,6 +23,7 @@ export const run = async () => {
     const app = new Core.BaseGameApp(gameSettings.name, appConfigs);
     await app.run();
     await app.startGame(container);
+    registerViewModule(app, container, definition);
 };
 
 run();

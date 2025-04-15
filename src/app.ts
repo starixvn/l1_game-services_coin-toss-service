@@ -4,6 +4,7 @@ import CoinTossContainerRegistry from "./coin-toss-container-registry";
 import GameData from "./game-data";
 import gameSettings from "./game-settings";
 import helper from "./helpers";
+import { registerViewModule } from "./register-view-module";
 const resultHelper = helper.resultHelper;
 
 const run = async () => {
@@ -15,6 +16,7 @@ const run = async () => {
     );
 
     const gameData = new GameData(gameSettings.durations.wholeRound);
+    gameData.viewPlayers = {};
 
     const container = new CoinTossContainerRegistry().register(appConfigs, definition, gameData);
 
@@ -23,6 +25,8 @@ const run = async () => {
     await app.run();
 
     await app.startGame(container);
+
+    registerViewModule(app, container, definition);
 };
 
 run();

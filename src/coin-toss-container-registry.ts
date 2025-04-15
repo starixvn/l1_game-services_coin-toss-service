@@ -7,7 +7,10 @@ import { InGameConsumer, OutGameConsumer, UserSignInConsumer, PlaceBetConsumer }
 import { RoundResultPublisher, RunningRoundInfoPublisher } from "./event-publishers";
 import GameData from "./game-data";
 import { betLogs, bets, results, rounds, tmpBets } from "./models/index";
-
+import ViewConsumer from "./consumers/view-consumer";
+import BaseViewRouter from "./routers/base-view-router";
+import GameStatusPublisher from "./event-publishers/game-status-publisher";
+import { userInfos } from "sc-base-database";
 export default class CoinTossContainerRegistry extends TableContainerRegistry {
     register(appConfigs: any, definition: Table.TableGameDefinition, gameData: GameData): AwilixContainer<any> {
         super.register(appConfigs, definition, gameData);
@@ -29,6 +32,7 @@ export default class CoinTossContainerRegistry extends TableContainerRegistry {
             runningRoundInfoPublisher: asClass(RunningRoundInfoPublisher).singleton(),
             placeBetPublisher: asClass(PlaceBetPublisher).singleton(),
             roundResultPublisher: asClass(RoundResultPublisher).singleton(),
+            gameStatusPublisher: asClass(GameStatusPublisher).singleton(),
         });
     }
 
@@ -40,7 +44,7 @@ export default class CoinTossContainerRegistry extends TableContainerRegistry {
             betsRepository: asValue(bets),
             tempBetsRepository: asValue(tmpBets),
             betLogsRepository: asValue(betLogs),
-            resultsRepository: asValue(results),
+            resultsRepository: asValue(results)
         });
     }
 
@@ -52,6 +56,7 @@ export default class CoinTossContainerRegistry extends TableContainerRegistry {
             userDisconnectConsumer: asClass(OutGameConsumer).singleton(),
             userSignInConsumer: asClass(UserSignInConsumer).singleton(),
             placeBetConsumer: asClass(PlaceBetConsumer).singleton(),
+            viewConsumer: asClass(ViewConsumer).singleton(),
         });
     }
 
@@ -62,6 +67,14 @@ export default class CoinTossContainerRegistry extends TableContainerRegistry {
             bot: asClass(Bot).singleton(),
             gameCron: asClass(GameCron).singleton().proxy(),
             processBetQueue: asClass(ProcessBetQueue).singleton().proxy(),
+        });
+    }
+
+    registerRouters() {
+        super.registerRouters();
+
+        this.container.register({
+            baseViewRouter: asClass(BaseViewRouter).proxy(),
         });
     }
 }

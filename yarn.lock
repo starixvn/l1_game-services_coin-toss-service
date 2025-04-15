@@ -2391,6 +2391,11 @@
   resolved "http://npm.lumigame.com/@types/range-parser/-/range-parser-1.2.7.tgz#50ae4353eaaddc04044279812f52c8c65857dbcb"
   integrity sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==
 
+"@types/sc-base-database@^1.0.0-beta.0":
+  version "1.0.0-beta.0"
+  resolved "http://npm.lumigame.com/@types/sc-base-database/-/sc-base-database-1.0.0-beta.0.tgz#a9d76460cbcb12131a5d74b5553af0f0d676b350"
+  integrity sha512-pTvfBwYxSd4O72joEUMxcmf3o3m+P49mRrbdqP7gPnFVTwiKgDjA785RBws/0dRncSHCEMWc3FEl3jNzM27VUg==
+
 "@types/sc-common@^1.0.0-beta.0":
   version "1.0.0-beta.0"
   resolved "http://npm.lumigame.com/@types/sc-common/-/sc-common-1.0.0-beta.0.tgz"
