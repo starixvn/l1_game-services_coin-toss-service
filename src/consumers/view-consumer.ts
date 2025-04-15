@@ -3,15 +3,23 @@ import GameData from "../game-data";
 import { Table } from "sc-game-base";
 import { RoundQuery } from "sc-game-base/src/core/query-apis";
 
+// Interface definitions for dependencies
+
 export default class ViewConsumer {
     private definition: Table.TableGameDefinition;
     private gameData: GameData;
     private roundQuery: RoundQuery;
+    private publisher: any;
+    private getBalance: (userId: string) => Promise<number>;
+    private userInfosRepository: any;
 
     constructor(
         definition: Table.TableGameDefinition,
         gameData: GameData,
-        roundQuery: RoundQuery
+        roundQuery: RoundQuery,
+        publisher: any,
+        getBalance: (userId: string) => Promise<number>,
+        userInfosRepository: any
     ) {
         console.log('[ViewConsumer] Constructor initialized', {
             gameName: definition.name,
@@ -20,6 +28,9 @@ export default class ViewConsumer {
         this.definition = definition;
         this.gameData = gameData;
         this.roundQuery = roundQuery;
+        this.publisher = publisher;
+        this.getBalance = getBalance;
+        this.userInfosRepository = userInfosRepository;
     }
 
     async consume(socketClient: Socket, id: string): Promise<void> {
@@ -40,7 +51,7 @@ export default class ViewConsumer {
 
     async buildPayload(): Promise<any> {
         console.log('[ViewConsumer] Building payload');
-        const { odds, originalOdds, enableFreeBet, boostedChoices } = this.gameData.gameConfigs;
+        const { odds, originalOdds, enableFreeBet, boostedChoices } = this.gameData.gameConfigs as any;
         const { totalBets, roundId, remainingTime } = this.gameData;
         const gameConfigs = { odds, originalOdds, enableFreeBet, boostedChoices };
         const roundHistory = await this.roundQuery.getList(this.definition.numberOfRoundHistory);
