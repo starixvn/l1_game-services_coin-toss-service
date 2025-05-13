@@ -10,7 +10,7 @@ import { betLogs, bets, results, rounds, tmpBets } from "./models/index";
 import ViewConsumer from "./consumers/view-consumer";
 import BaseViewRouter from "./routers/base-view-router";
 import GameStatusPublisher from "./event-publishers/game-status-publisher";
-import { userInfos } from "sc-base-database";
+
 export default class CoinTossContainerRegistry extends TableContainerRegistry {
     register(appConfigs: any, definition: Table.TableGameDefinition, gameData: GameData): AwilixContainer<any> {
         super.register(appConfigs, definition, gameData);

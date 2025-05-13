@@ -4,9 +4,9 @@ import { Table } from "sc-game-base";
 import { RoundQuery } from "sc-game-base/src/core/query-apis";
 
 export default class ViewConsumer {
-    private definition: Table.TableGameDefinition;
-    private gameData: GameData;
-    private roundQuery: RoundQuery;
+    private readonly definition: Table.TableGameDefinition;
+    private readonly gameData: GameData;
+    private readonly roundQuery: RoundQuery;
 
     constructor(
         definition: Table.TableGameDefinition,

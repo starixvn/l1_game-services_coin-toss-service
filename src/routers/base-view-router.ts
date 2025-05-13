@@ -13,9 +13,9 @@ interface RouterDependencies {
 }
 
 export default class BaseViewRouter {
-    private gameData: GameData;
-    private logService: LogService;
-    private viewConsumer: ViewConsumer;
+    private readonly gameData: GameData;
+    private readonly logService: LogService;
+    private readonly viewConsumer: ViewConsumer;
     private socketClient: Socket | undefined;
 
     constructor({
