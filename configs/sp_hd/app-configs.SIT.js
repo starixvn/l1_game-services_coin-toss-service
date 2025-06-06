@@ -33,7 +33,7 @@ export default {
     },
     enabledLogs: true,
     database: {
-        url: "mongodb://hotdog_backend:HotdogBackend%40517@10.99.99.53:39530,10.99.99.54:39530,10.99.99.188:39530,10.99.99.187:39530/?authSource=admin&replicaSet=SP-SIT&appName=Pontoon",
+        url: "mongodb://hotdog_backend:HotdogBackend%40517@10.99.99.53:39530,10.99.99.54:39530,10.99.99.188:39530,10.99.99.187:39530/?authSource=admin&replicaSet=SP-SIT&appName=cointoss",
         options: {
             dbName: "hotdog_minigame",
             useNewUrlParser: true,
