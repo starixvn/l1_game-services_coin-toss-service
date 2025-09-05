@@ -51,6 +51,9 @@ export default {
         secretKey: "6c1f0f28-70f2-46ae-b031-22624a6cd8df",
     },
     enableMsgpackParser: true,
+    gameManagementApiSettings: {
+        BASE: "http://sp-hd-game-management-service-uat-service:5000",
+    },
     chatBotSettings: {
         url: "https://bot.nexdev.net/skynex/api/messages/",
         token: "0A40aOc7CtpzjbBSJu8KNWQRoXyjRvf9",
@@ -61,7 +64,7 @@ export default {
     },
     enabledBoostedOdds: true,
     otel: {
-        system: "SG",
+        system: "HD",
         enabled: false,
         endpoint: "http://10.2.190.51:4318/v1/traces",
     },
